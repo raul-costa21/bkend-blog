@@ -1,0 +1,316 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: #f3f4ed;
+  color: #424642;
+}
+
+/* Navbar */
+
+.custom-nav {
+  margin-bottom: 5%;
+  background-color: #c06114cc;
+  font-size: 1rem;
+  letter-spacing: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.nav-link,
+.navbar-brand {
+  transition: none;
+  color: #f3f4ed;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: #424642;
+}
+
+/* body */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Special Elite", cursive;
+  color: #424642;
+}
+
+h1 {
+  width: 70%;
+  margin: 5% auto 10%;
+  text-align: center;
+}
+
+h2 {
+  color: #c06114cc;
+  text-shadow: #424642 1px 1px;
+  text-indent: 0%;
+}
+
+p,
+label,
+button {
+  text-indent: 3%;
+  line-height: 1.8rem;
+  letter-spacing: 0.9px;
+}
+
+button {
+  text-indent: 0%;
+}
+
+/* the padding-bottom is euqla to the height of the footer; the minimal height of the screen is always 100% of the viewport */
+.main-content {
+  min-height: 100vh;
+  margin: 5% 10%;
+  padding-bottom: 3.125rem;
+}
+
+/* posts */
+
+.posts {
+  border-bottom: dotted 1px;
+  border-color: #424642;
+  margin-bottom: 5%;
+  width: 70%;
+}
+
+.posts p {
+  text-indent: 0;
+  padding-left: 3%;
+  padding-top: 1.5%;
+}
+
+/* pre-wrap in order to keep the white space like the user left it */
+.post-page p {
+  white-space: pre-wrap;
+}
+
+.posts-readMore,
+.form-check a {
+  color: #424642;
+  text-decoration: none;
+  text-shadow: #c06114cc 0.5px 0.5px;
+}
+
+.posts-readMore:hover,
+.form-check a:hover {
+  color: #424642;
+}
+
+.post-page {
+  padding-bottom: 1.5%;
+}
+
+/* compose */
+
+.compose-labels {
+  text-indent: 0%;
+  margin-top: 2%;
+}
+
+.compose-button {
+  margin-top: 2%;
+  background-color: #c06114cc;
+  color: #f3f4ed;
+  line-height: 1.8rem;
+  transition: none;
+}
+
+.compose-button:hover {
+  color: #424642;
+  background-color: #f3f4ed;
+  border: 1px solid;
+}
+
+.compose-button:focus {
+  box-shadow: none;
+  border-color: #424642;
+}
+
+/* delete */
+
+.delete-title {
+  margin-bottom: 2%;
+}
+
+.delete-label {
+  text-indent: 0;
+  line-height: 0;
+}
+
+.form-check {
+  margin-bottom: 2%;
+}
+
+.form-check-input:checked {
+  background-color: #424642;
+  border-color: #424642;
+}
+
+/* this is for the delete and compose page */
+.form-check-input:focus,
+.form-control:focus {
+  box-shadow: none;
+  border-color: #424642;
+}
+
+/* subscribe */
+.sub-main {
+  min-height: 100vh;
+  padding-bottom: 3.125rem;
+  margin-top: -5%;
+  background-image: url("/images/old_typewriter_blur2.jpg");
+  background-size: cover;
+}
+
+.sub-form {
+  width: 30%;
+  padding: 16rem 6rem;
+  height: 100vh;
+  margin: 0 60%;
+  background-color: #f1f1f199;
+  border-left: solid;
+  border-right: solid;
+}
+
+.sub-form input {
+  display: block;
+  border: 1px solid #424642;
+  padding-left: 2%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.808);
+}
+
+.sub-form input:nth-child(2) {
+  margin-bottom: -1px;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+.sub-form input:nth-child(3) {
+  margin-bottom: -1px;
+}
+
+.sub-form input:nth-child(4) {
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  margin-bottom: 5%;
+}
+
+.sub-form input:focus {
+  outline: none;
+}
+
+.sub-form button {
+  width: 100%;
+  background-color: #424642;
+}
+
+.sub-form h2 {
+  text-align: center;
+  margin: 0 auto 7%;
+  color: #c06114cc;
+  text-shadow: #424642 1px 1px;
+  font-size: 3rem;
+}
+
+/* Success/Fail page */
+
+.success-page {
+  border-bottom: none;
+}
+
+.success-page a {
+  letter-spacing: 0.9px;
+}
+
+/* footer (the negative margim top is equal to the height of the footer and the padding of the main content div */
+.end-content {
+  text-align: center;
+  width: 100%;
+  height: 3.125rem;
+  margin-top: -3.125rem;
+  padding-top: 1rem;
+  background-color: #c06114cc;
+}
+
+.end-content p {
+  color: #f3f4ed;
+  text-indent: 0%;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 320px) and (max-width: 769px) {
+  h1 {
+    width: 100%;
+  }
+
+  .posts {
+    margin-bottom: 20%;
+    width: 100%;
+  }
+
+  .compose-button {
+    margin-top: 10%;
+  }
+
+  .delete-title {
+    margin-bottom: 10%;
+  }
+
+  /* Subscribe */
+  .sub-form {
+    width: 100%;
+    margin: 0;
+    padding: 10rem 3rem;
+  }
+
+  .sub-form h2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (min-width: 482px) and (max-width: 769px) {
+  /* Subscribe */
+  .sub-form {
+    width: 50%;
+    margin: 0 50%;
+    padding: 10rem 1rem;
+  }
+
+  .sub-form h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+  /* Subscribe */
+  .sub-form {
+    width: 40%;
+    margin: 0 55%;
+    padding: 12rem 3rem;
+  }
+
+  .sub-form h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1599px) {
+  /* Subscribe */
+  .sub-form {
+    width: 35%;
+    margin: 0 55%;
+    padding: 12rem 3rem;
+  }
+
+  .sub-form h2 {
+    font-size: 2.5rem;
+  }
+}

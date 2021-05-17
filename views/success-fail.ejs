@@ -1,0 +1,14 @@
+<%- include('partials/header'); -%>
+
+<div class="posts post-page success-page">
+  <% if (sub == "Success") { %>
+  <h2>Success</h2>
+  <p>Subscription to our blog successfully made. Thank you!</p>
+  <% } else { %>
+  <h2>Fail</h2>
+  <p>Something went wrong when trying to subscribe you to our blog</p>
+  <% } %>
+  <a class="btn compose-button" href="/">Bkend Blog</a>
+</div>
+
+<%- include('partials/footer'); -%>

@@ -1,0 +1,24 @@
+<%- include('partials/header'); -%>
+
+<h2 class="delete-title">Delete Posts</h2>
+
+<% const idPost = ["609bdb7fc68870152c400e5a", "609bdb9bc68870152c400e5b", "609bdbadc68870152c400e5c"]; %> 
+
+<% if (postsData.length > 3) { %>
+  <form action="/delete" method="post">
+    <% for (let post of postsData) { %>
+      <% if(!idPost.includes(String(post._id))){ %>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="<%= post._id %>" name="postId" value="<%= post._id %>" />
+          <label for="<%= post._id %>" class="delete-label">Post title: <a href="/posts/<%= post._id %>"><%= post.title %></a> </label>
+        </div>
+      <% } %>
+    <% } %>
+    <button type="submit" class="btn compose-button">Delete</button>
+  </form>
+<% } else { %>
+  <p>No posts to delete!</p>
+<% } %>
+
+
+<%- include('partials/footer'); -%>

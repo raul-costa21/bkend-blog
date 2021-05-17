@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+
+<h1>"It’s not a bug — it’s an undocumented feature."</h1>
+
+<% for (let post of postsData){ %>
+<div class="posts">
+  <h2><%= post.title %></h2>
+  <% let limitContent = post.post.slice(0,250) %>
+  <p><%= limitContent + "..." %> <a class="posts-readMore" href="/posts/<%= post._id %>">Read More</a></p>
+</div>
+<%}%> 
+
+<%- include('partials/footer'); -%>
